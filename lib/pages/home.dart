@@ -2,7 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:web_stepmx/utils/responsive_widget.dart';
 
-const heroText = 'La era digital es aqui y ahora.\nAtrevete a ser parte del cambio.';
+const heroText = 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.';
 
 class Home extends ResponsiveWidget {
 
@@ -37,7 +37,7 @@ class HomeDesktop extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20)
               ),
               height: MediaQuery.of(context).size.width/6,
-              width: MediaQuery.of(context).size.width/3,
+              width: MediaQuery.of(context).size.width/2,
               child: Padding(
                 padding: EdgeInsets.all(8),
                 child: Center(
@@ -48,9 +48,9 @@ class HomeDesktop extends StatelessWidget {
             ),
           ]
           ),
-          SizedBox(height: 30,),
-          AutoSizeText('Nuestros clientes: ', style: TextStyle(fontSize: 30),),
-          SizedBox(height: 30,),
+          SizedBox(height: 25,),
+          AutoSizeText('Nuestros clientes: ', style: TextStyle(fontSize: 35),),
+          SizedBox(height: 25,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -79,50 +79,53 @@ class HomeMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Stack(
-              alignment: Alignment.center, children: [
-            Image.asset('assets/images/Gradiante Top.png'),
-          ]
-          ),
-          SizedBox(height: 30,),
-          Container(
-            decoration: BoxDecoration(
-                color: Colors.blue.withOpacity(0.5),
-                borderRadius: BorderRadius.circular(20)
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Stack(
+                alignment: Alignment.center, children: [
+              Image.asset('assets/images/Gradiante Top.png'),
+            ]
             ),
-            height: MediaQuery.of(context).size.width/6,
-            width: MediaQuery.of(context).size.width/3,
-            child: Padding(
-              padding: EdgeInsets.all(8),
-              child: Center(
-                child: AutoSizeText(heroText,
-                  style: TextStyle(color: Colors.white), textAlign: TextAlign.center,),
+            SizedBox(height: 30,),
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.blue.withOpacity(1),
+                  borderRadius: BorderRadius.circular(20)
+              ),
+              height: MediaQuery.of(context).size.width/3,
+              width: MediaQuery.of(context).size.width*0.7,
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Center(
+                  child: AutoSizeText(heroText,
+                    style: TextStyle(color: Colors.white, fontSize: 30), textAlign: TextAlign.center,),
+                ),
               ),
             ),
-          ),
-          SizedBox(height: 30,),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              AutoSizeText('Nuestros clientes: '),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset('assets/images/ClienteBrrb.png', width: MediaQuery.of(context).size.width/2,),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset('assets/images/Cliente Cimadde.png', width: MediaQuery.of(context).size.width/2,),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset('assets/images/Cliente Cai.png', width: MediaQuery.of(context).size.width/2,),
-              ),
-            ],
-          ),
-        ],
+            SizedBox(height: 30,),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                AutoSizeText('Nuestros clientes: ', style: TextStyle(fontSize: 25),),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset('assets/images/ClienteBrrb.png', width: MediaQuery.of(context).size.width/2,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset('assets/images/Cliente Cimadde.png', width: MediaQuery.of(context).size.width/2,),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset('assets/images/Cliente Cai.png', width: MediaQuery.of(context).size.width/2,),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

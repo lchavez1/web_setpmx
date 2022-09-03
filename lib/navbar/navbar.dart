@@ -7,7 +7,7 @@ import '../utils/responsive_widget.dart';
 import '../webpage.dart';
 import 'navbar_button.dart';
 
-const urlLogo = 'assets/images/StepMx Logo1-1 Blanco.png';
+const urlLogo = 'assets/images/StepMx Logo Blanco.png';
 
 class NavBar extends ResponsiveWidget{
 
@@ -38,8 +38,8 @@ class DesktopNavBar extends HookConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Expanded(child: Container()),
-            Image.asset('assets/images/StepMx Logo1-1 Blanco.png', height: 100,),
+            //Expanded(child: Container()),
+            Image.asset(urlLogo, height: 100,),
             Expanded(child: Container()),
             Row(
               children: [
