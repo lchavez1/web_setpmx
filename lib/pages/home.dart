@@ -1,8 +1,13 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:web_stepmx/utils/responsive_widget.dart';
 
 const heroText = 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.';
+
+final Uri cimadde = Uri.parse('http://cimadde.com.mx');
+final Uri brrb = Uri.parse('https://flutter.dev');
+final Uri cai = Uri.parse('https://flutter.dev');
 
 class Home extends ResponsiveWidget {
 
@@ -56,15 +61,16 @@ class HomeDesktop extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Image.asset('assets/images/ClienteBrrb.png', width: MediaQuery.of(context).size.width/4,),
+                child: GestureDetector(child: Image.asset('assets/images/ClienteBrrb.png', width: MediaQuery.of(context).size.width/4,), onTap: () => launchUrl(cimadde)
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Image.asset('assets/images/Cliente Cimadde.png', width: MediaQuery.of(context).size.width/4,),
+                child: GestureDetector(child: Image.asset('assets/images/Cliente Cimadde.png', width: MediaQuery.of(context).size.width/4,), onTap: () => launchUrl(cimadde),),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Image.asset('assets/images/Cliente Cai.png', width: MediaQuery.of(context).size.width/4,),
+                child: GestureDetector(child: Image.asset('assets/images/Cliente Cai.png', width: MediaQuery.of(context).size.width/4,), onTap: () => launchUrl(cimadde),),
               ),
             ],
           ),

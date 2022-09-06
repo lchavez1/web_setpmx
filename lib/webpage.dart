@@ -8,6 +8,7 @@ import 'package:web_stepmx/pages/contact.dart';
 import 'package:web_stepmx/pages/customers.dart';
 import 'package:web_stepmx/pages/home.dart';
 import 'package:web_stepmx/pages/services.dart';
+import 'package:web_stepmx/utils/whatsapp.dart';
 
 final inicio = GlobalKey();
 final nosotros = GlobalKey();
@@ -86,6 +87,7 @@ class WebPage extends HookConsumerWidget {
             ),
           ),
         ),
+        floatingActionButton: floatingActionButtonWhatsApp()
       )
     ]));
   }
