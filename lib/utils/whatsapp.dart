@@ -11,6 +11,6 @@ FloatingActionButton floatingActionButtonWhatsApp(){
   return FloatingActionButton(
       child: Image.asset('assets/icons/whatsapp.png'),
       backgroundColor: Colors.white,
-      onPressed: () => launchWhatsApp('+524291170436', 'Hola')
+      onPressed: () => launchWhatsApp('+524291170436', 'Escribenos tu mensaje aqui ...')
   );
 }
