@@ -7,7 +7,7 @@ const heroText = 'Contrary to popular belief, Lorem Ipsum is not simply random t
 
 final Uri cimadde = Uri.parse('http://cimadde.com.mx');
 final Uri brrb = Uri.parse('https://flutter.dev');
-final Uri cai = Uri.parse('https://flutter.dev');
+final Uri cai = Uri.parse('https://servicioscai.com/');
 
 class Home extends ResponsiveWidget {
 
@@ -54,8 +54,6 @@ class HomeDesktop extends StatelessWidget {
           ]
           ),
           SizedBox(height: 25,),
-          AutoSizeText('Nuestros clientes: ', style: TextStyle(fontSize: 35),),
-          SizedBox(height: 25,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -70,7 +68,7 @@ class HomeDesktop extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: GestureDetector(child: Image.asset('assets/images/Cliente Cai.png', width: MediaQuery.of(context).size.width/4,), onTap: () => launchUrl(cimadde),),
+                child: GestureDetector(child: Image.asset('assets/images/Cliente Cai.png', width: MediaQuery.of(context).size.width/4,), onTap: () => launchUrl(cai),),
               ),
             ],
           ),
@@ -115,7 +113,6 @@ class HomeMobile extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                AutoSizeText('Nuestros clientes: ', style: TextStyle(fontSize: 25),),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Image.asset('assets/images/ClienteBrrb.png', width: MediaQuery.of(context).size.width/2,),
